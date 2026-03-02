@@ -20,6 +20,78 @@
     <meta property="og:description" content="台灣韓語口譯專業服務 - 由7年資深總監管理的頂尖1%口譯團隊，提供商務、娛樂、展覽等專業口譯服務。">
     <meta property="og:image" content="https://k-partners.vercel.app/hero-microphone.png">
 
+    <!-- Performance Optimization / Core Web Vitals -->
+    <link rel="preload" href="index.css" as="style">
+    <link rel="preload" href="hero-microphone.png" as="image">
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "name": "韓台商務口譯專家 (Korea-Taiwan Interpretation Agency)",
+          "url": "https://k-partners.vercel.app/",
+          "logo": "https://k-partners.vercel.app/hero-microphone.png",
+          "description": "台灣韓語口譯專業服務 - 由7年資深總監管理的頂尖1%口譯團隊，提供商務、娛樂、展覽等專業口譯服務。",
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "Customer Service",
+            "url": "https://lin.ee/hgTkRBR"
+          }
+        },
+        {
+          "@type": "Service",
+          "name": "專業韓台口譯服務",
+          "provider": {
+            "@type": "Organization",
+            "name": "韓台商務口譯專家"
+          },
+          "serviceType": ["商務口譯", "娛樂與活動口譯", "展覽與MICE", "商務支援服務"],
+          "areaServed": ["Taiwan", "South Korea"]
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "如何開始合作？",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "請透過 LINE 官方帳號聯繫我們，說明您的需求。總監將親자評估並安排適合的口譯專家。"
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "需要提前多久預約？",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "建議至少提前 2-3 週預約，以確保能為您安排最適合的專家。急件請直接在 LINE 中說明。"
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "有提供哪些地區服務？",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "我們主要服務台灣與韓國各地。若有其他國家的出差需求，也可以與我們討論。"
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "費用如何計算？",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "費用視專案性質、時數、地點與難易度而定。請聯繫我們獲取詳細報價單。"
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
     <link rel="stylesheet" href="index.css">
     <script src="script.js" defer></script>
 </head>
@@ -37,9 +109,9 @@
                     <a href="#team" class="nav-link" data-i18n="nav.team_quality">團隊介紹</a>
                     <a href="#process" class="nav-link" data-i18n="nav.process">合作流程</a>
                     <a href="#faq" class="nav-link" data-i18n="nav.faq">常見問題</a>
-                    <div class="lang-switcher">
-                        <span class="lang-option active">繁中</span>
-                        <span class="lang-option">한국어</span>
+                    <div class="lang-switcher" aria-label="選擇語言 / 언어 선택">
+                        <span class="lang-option active" role="button" tabindex="0">繁中</span>
+                        <span class="lang-option" role="button" tabindex="0">한국어</span>
                     </div>
                 </nav>
             </div>
@@ -94,7 +166,7 @@
                     <div class="stat-card-inner">
                         <div class="stat-card-front">
                             <div class="stat-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
                                     <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
                                     <path d="m9 12 2 2 4-4" />
                                 </svg>
@@ -115,7 +187,7 @@
                     <div class="stat-card-inner">
                         <div class="stat-card-front">
                             <div class="stat-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
                                     <circle cx="12" cy="12" r="10" />
                                     <line x1="2" y1="12" x2="22" y2="12" />
                                     <path
@@ -138,7 +210,7 @@
                     <div class="stat-card-inner">
                         <div class="stat-card-front">
                             <div class="stat-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
                                     <path d="m11 17 2 2a6 6 0 0 0 2.26-1.77L20 12" />
                                     <path
                                         d="M18.8 6a4 4 0 0 0-5.69 0L10 9l-4 4-2.25 2.26a1.99 1.99 0 0 0 0 2.83l.94.94a2 2 0 0 0 2.83 0L9.7 16.8 15 11l-3.3-3.07a2 2 0 0 1 0-2.83Z" />
@@ -160,7 +232,7 @@
                     <div class="stat-card-inner">
                         <div class="stat-card-front">
                             <div class="stat-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
                                     <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
                                     <line x1="8" y1="10" x2="16" y2="10" />
                                     <line x1="8" y1="14" x2="12" y2="14" />
@@ -390,7 +462,7 @@
                 style="text-align: center; border-top: none; box-shadow: none; background: transparent;">
                 <a href="https://lin.ee/hgTkRBR" target="_blank" class="btn btn-primary"
                     style="padding: 1.5rem 4rem; font-size: 1.5rem;">
-                    <img src="line_icon.png" alt="LINE" style="width: 2rem; height: 2rem;">
+                    <img src="line_icon.png" alt="LINE" style="width: 2rem; height: 2rem;" loading="lazy">
                     <span data-i18n="contact.button">加入 LINE 官方帳號</span>
                 </a>
             </div>
