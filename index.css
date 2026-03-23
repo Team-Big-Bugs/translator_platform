@@ -451,7 +451,7 @@ p {
   perspective: 1000px;
   /* 3D Depth */
   background: transparent;
-  min-height: 320px;
+  min-height: 360px;
   /* Ensure height for absolute children */
   padding: 0;
   border: none;
@@ -541,6 +541,19 @@ p {
 }
 
 
+/* Emoji Icon Variant */
+.stat-icon--emoji {
+  font-size: 2.5rem;
+  line-height: 1;
+  width: auto;
+  height: auto;
+  color: inherit;
+}
+
+.stat-icon--emoji svg {
+  display: none;
+}
+
 /* Icons - Fix Black Color Issue */
 .stat-icon {
   width: 56px;
@@ -560,6 +573,30 @@ p {
   stroke-width: 1.5;
   stroke-linecap: round;
   stroke-linejoin: round;
+}
+
+/* Inverted Card - Default Dark, Flips to White */
+.stat-card--inverted .stat-card-front {
+  background-color: var(--color-navy-primary);
+  color: var(--color-white);
+}
+
+.stat-card--inverted .stat-card-front .stat-icon {
+  color: var(--color-white);
+}
+
+.stat-card--inverted .stat-card-front .stat-label {
+  color: var(--color-white);
+}
+
+.stat-card--inverted .stat-card-back {
+  background-color: var(--color-white);
+  color: var(--color-navy-primary);
+  border: 1px solid var(--color-navy-primary);
+}
+
+.stat-card--inverted .stat-card-back .stat-description {
+  color: var(--color-navy-primary);
 }
 
 /* Featured Card (500+) - Default Dark */
@@ -794,6 +831,50 @@ p {
   font-size: 0.95rem;
 }
 
+
+/* === INDUSTRY GRID === */
+.industry-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.industry-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 2.5rem 1.5rem;
+  background: var(--color-white);
+  border: 1px solid rgba(10, 37, 64, 0.1);
+  border-radius: 16px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.industry-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(10, 37, 64, 0.1);
+}
+
+.industry-icon {
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+.industry-label {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-navy-primary);
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .industry-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 
 /* === SERVICES SECTION (Minimal Cards) === */
 .services-grid {
@@ -1045,36 +1126,103 @@ p {
 .footer {
   background: var(--color-navy-dark);
   color: var(--color-text-muted);
-  padding: 5rem 0 2rem;
-  text-align: center;
+  padding: 4rem 0 2rem;
 }
 
 .footer-content {
   display: flex;
   flex-direction: column;
+  gap: 0;
+}
+
+.footer-main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
   align-items: center;
-  gap: var(--spacing-sm);
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .footer-logo {
-  font-size: 2rem;
+  font-size: 1.75rem;
   font-weight: 800;
   color: var(--color-white);
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   letter-spacing: -0.02em;
 }
 
 .footer-text {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   line-height: 1.8;
 }
 
 .footer-divider {
   width: 100%;
-  max-width: 1280px;
   height: 1px;
   background: rgba(255, 255, 255, 0.1);
-  margin: 3rem auto;
+  margin: 2.5rem 0;
+}
+
+.footer-join {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.6rem;
+  padding-left: 3rem;
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 768px) {
+  .footer-main {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .footer-join {
+    align-items: center;
+    padding-left: 0;
+    border-left: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 2rem;
+    text-align: center;
+  }
+}
+
+.footer-join-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.85);
+  letter-spacing: 0.02em;
+}
+
+.footer-join-desc {
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.45);
+  line-height: 1.6;
+  max-width: 420px;
+}
+
+.footer-join-btn {
+  display: inline-block;
+  margin-top: 0.4rem;
+  padding: 0.5rem 1.4rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 999px;
+  text-decoration: none;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.footer-join-btn:hover {
+  color: var(--color-white);
+  border-color: rgba(255, 255, 255, 0.6);
 }
 
 .footer-copyright {
