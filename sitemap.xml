@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://k-partners.vercel.app/</loc>
-    <lastmod>2026-03-02</lastmod>
+    <lastmod>2026-03-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://k-partners.vercel.app/kpartners_logo_3d.png</image:loc>
+      <image:title>K-Partners 韓台口譯專家</image:title>
+      <image:caption>台灣專業韓語口譯服務，涵蓋半導體・貿易・金融等B2B商務場合</image:caption>
+    </image:image>
   </url>
 </urlset>
